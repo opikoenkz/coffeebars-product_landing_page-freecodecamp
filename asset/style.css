@@ -1,0 +1,1196 @@
+/*================== Import Google Fonts =================*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700|Open+Sans");
+
+/*================== General =================*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+body {
+    font-family: 'Open Sans', Verdana, sans-serif;
+    background-color: #fff;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; }
+
+img {
+    max-width: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins','Montserrat', sans-serif;
+    font-weight: 700;
+    color: #2E2E2E; }
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #252525;
+    text-align: justify;
+    margin: 10px; }
+
+a, i, span {
+    display: inline-block;
+    text-decoration: none; }
+
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none; }
+
+ul, ol, li {
+    list-style-type: none;
+    padding: 0px;
+    margin: 2px; }
+
+ul li {
+    text-decoration: none;
+    margin: 2px; }
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto; }
+
+.col-3 {
+    max-width: 25%; float: left; flex: 25%; padding: 0px 4px; }
+.col-4 {
+    max-width: 33.33%; float: left; flex: 33.33%; padding: 0px 4px; }
+.col-5 {
+    max-width: 41.66%; float: left; flex: 41.66%; padding: 0 4px; }
+.col-6 {
+    max-width: 50%; float: left; flex: 50%; padding: 0px 4px; }
+.col-7 {
+    max-width: 58.33%; float: left; flex: 58.33%; padding: 0 4px; }
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px; }
+
+/*================== Section =================*/
+section {
+    padding: 30px 80px; }
+
+.section-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px; }
+
+.section-title {
+    font-size: 36px;
+    color: #2e2e2e;
+    text-transform: uppercase; }
+
+/*================== Navbar =================*/
+.navbar {
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fafafa;
+    padding: 5px 8px;
+    z-index: 3; }
+
+.navbar .logo img{
+    width: 30%;
+    padding: 4px;
+    margin: 8px 0px 8px 60px;
+    transition: all 0.3s ease; }
+
+.navbar .navbar-menu {
+    display: flex;
+    float: right;
+    list-style: none;
+    padding-right: 80px;
+    align-items: center; }
+
+.navbar-menu li .nav-link {
+    font-weight: 600;
+    color: #414141;
+    padding: 1rem 1.4rem;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out; }
+
+.navbar-menu li .nav-link:hover {
+    color: #e2b41c;
+    cursor: pointer; }
+
+.navbar-menu .fa.fa-shopping-cart {
+    font-size: 22px;
+    color: #414141; }
+.navbar-menu .fa.fa-shopping-cart:hover {
+    color: #e2b41c; }
+
+/*----- Navbar Menu Buttons  -----*/
+.navbar .menu-btn {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer; 
+    margin: 20px auto;
+    z-index: 4; }
+
+.menu-btn__lines,
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: #1a1a1a;
+    transition: all 0.5s ease-in-out; }
+
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+    content: "";
+    position: absolute; }
+
+.menu-btn__lines::before {
+    transform: translateY(-0.5rem); }
+
+.menu-btn__lines::after {
+    transform: translateY(0.5rem); }
+
+/*----- animation -----*/
+.menu-btn.open .menu-btn__lines {
+    transform: translateX(2rem);
+    background-color: transparent; }
+.menu-btn.open .menu-btn__lines::before {
+    transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+    background-color: #ffffff; }
+.menu-btn.open .menu-btn__lines::after {
+    transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+    background-color: #ffffff; }
+
+/*================== Hero Image =================*/
+.hero-image {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 630px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slide 28s infinite; }
+
+/*----- Hero Slider -----*/
+.hero-image .load {
+    animation: slide 4s; }
+
+@keyframes slide {
+    0% {
+        background-image: url(images/Banner.jpg); }
+    20% {
+        background-image: url(images/Banner.jpg); }
+    20.9% {
+        background-image: url(images/Banner-2.jpg); }
+    40% {
+        background-image: url(images/Banner-2.jpg); }
+    40.9% {
+        background-image: url(images/Banner-3.jpg); }
+    60% {
+        background-image: url(images/Banner-3.jpg); }
+    60.9% {
+        background-image: url(images/Banner-4.jpg); }
+    80% {
+        background-image: url(images/Banner-4.jpg); }
+    80.9% {
+        background-image: url(images/Banner-5.jpg); }
+    100% {
+        background-image: url(images/Banner-5.jpg); }
+}
+
+/*----- Hero Slider End -----*/
+.hero-image .container {
+    margin: auto; }
+
+.home-content {
+    margin: auto 0px auto 110px; }
+
+.text-1, .text-2 {
+    font-size: 60px;
+    font-weight: 800;
+    color: #ebb71c;
+    padding-left: 30px; }
+
+.text-3 {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 0px 0px 30px;
+    margin-bottom: 20px; }
+
+/*----- Btn Hero -----*/
+.btn-control .btn-hero {
+    width: 12%;
+    height: 45px;
+    border-radius: 22px;
+    margin-left: 30px; }
+
+.btn-control .fa.fa-shopping-cart {
+    font-size: 18px;
+    padding-right: 5px; }
+
+/*================== Buttons =================*/
+.btn-control {
+    display: flex;
+    width: 100%;
+    text-align: center; }
+
+.btn {
+    display: block;
+    width: 100%;
+    min-height: 38px;
+    background-color: #e2b41c;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    list-style: none;
+    padding: 12px;
+    margin: 5px; }
+
+.btn-hero:hover, .btn-hero:focus, 
+.btn-about:hover, .btn-about:focus,
+.btn-product:hover, .btn-product:focus,
+.btn-subscribe:hover, .btn-subscribe:focus {
+    background-color: #f0d749;
+    font-weight: bold;
+    color: #2c2c2c;
+    cursor: pointer; }
+
+/*================== About =================*/
+.box-content {
+    margin-top: 10px;
+    margin-bottom: 5px; }
+
+/*----- Content About -----*/     
+.content-about { 
+    padding-top: 25px; 
+    padding-left: 35px;
+    margin: auto; }
+
+.content-about h3 {
+    font-size: 42px;
+    padding-left: 7px;
+    margin-bottom: 10px; }
+
+/*----- Btn About -----*/
+.btn.btn-about {
+    width: 25%;
+    height: 45px;
+    border-radius: 8px;
+    margin-left: 42px; }
+
+/*----- Content Image -----*/
+.box-content.content-image {
+    width: 90%;
+    float: left;
+    padding-left: 30px;
+    margin-top: -450px;
+    margin-left: 15px; }
+
+.content-image img {
+    width: 30%;
+    height: auto;
+    cursor: pointer; }
+
+/*----- The Modal (background) -----*/
+.modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-top: 100px;
+    z-index: 5; }
+
+.modal-content {
+    display: block;
+    width: 80%;
+    max-width: 560px;
+    margin: auto; }
+
+/*----- Add Animation Modal -----*/
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s; }
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0);}
+    to {text-replace: scale(1);} }
+
+@keyframes zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);} }
+
+/*----- The Close Button -----*/
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    transition: 0.3s; }
+
+.close:hover {
+    color: #b3b3b3;
+    text-decoration: none;
+    cursor: pointer; }
+
+/*----- About Image -----*/
+.about-img-1 img {
+    position: relative;
+    display:block;
+    width: 90%;
+    height: auto;
+    float: right;
+    border-radius: 8px;
+    box-shadow: 0px 10px 40px 0px rgba(58, 75, 83, 0.3);
+    margin-top: 90px;
+    margin-right: 15px; }
+    
+.about-img-2 img {
+    position: relative;
+    display:block;
+    width: 75%;
+    height: auto;
+    float: left;
+    border-radius: 8px;
+    box-shadow: 0px 10px 40px 0px rgba(58, 75, 83, 0.18);
+    margin-top: -160px; }
+
+/*================== Card Coffee =================*/
+.card {
+    background-color: #fcfcfc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 10px 25px 20px 10px; }
+
+/*----- Card Barista Team -----*/
+.card-wrapper {
+    position: relative;
+    height: 450px;
+    padding: 0px 10px;
+    margin-top: -30px;
+    margin-bottom: 40px; }
+
+.card-image {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 370px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%);
+    overflow: hidden; }
+
+.card-description {
+    justify-content: center;
+    color: #2e2e2e;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    margin: 8px; }
+
+/*================== Products =================*/
+/*----- Card Coffee -----*/
+.card.about-item {
+    border-radius: 0px 30px 0px 0px;
+    padding-top: 30px;
+    margin-top: 35px; }
+
+.about-item p {
+    font-size: 14px;
+    color: #5a5858; }
+    
+.about-icon {
+    font-size: 30px;
+    padding-left: 10px; }
+    
+.about-icon i {
+    font-weight: 550;
+    color: #a39050; }
+
+/*----- Shop Location -----*/
+figure.shop-img * {
+    -webkit-box-sizing: padding-box;
+    box-sizing: padding-box;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+    
+figure.shop-img {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 12px 0px 12px 25px;
+    margin: 25px 0px;
+    cursor: pointer; }
+    
+figure.shop-img img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    border-radius: 8px;
+    box-shadow: 0px 10px 16px 0px rgba(24, 27, 29, 0.2); }
+    
+figure.shop-img figcaption {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    width: 100%;
+    height: 100%;
+    padding: 280px 80px 100px 80px;
+    z-index: 1; }
+    
+.shop-img figcaption h2,
+.shop-img figcaption p,
+.shop-img figcaption .shop-about {
+    opacity: 0;
+    line-height: 1.5em;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s, -moz-transform 0.35s, -o-transform 0.35s, transform 0.35s; }
+    
+.shop-img figcaption h2 {
+    font-size: 38px;
+    text-transform: uppercase; 
+    margin: 0 0 5px;
+    -webkit-transform: translate3d(0%, 50%, 0);
+    transform: translate3d(0%, 50%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s; }
+    
+.shop-img figcaption p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 15px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+    
+.shop-img figcaption .shop-about {
+    font-size: 16px;
+    font-weight: 600;
+    color: #414141;
+    margin: 0 0 15px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+    
+.shop-img:hover:before,
+.shop-img:hover:after,
+.shop-img:hover figcaption:before,
+.shop-img:hover figcaption:after {
+    opacity: 0.2; }
+    
+.shop-img:hover img {
+    opacity: 0.4; }
+    
+.shop-img:hover figcaption h2 {
+    opacity: 1;
+    -webkit-transform: translate3d(0%, 0%, 0);
+    transform: translate3d(0%, 0%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s; }
+    
+.shop-img:hover figcaption p {
+    opacity: 0.9;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s; }
+    
+.shop-img:hover figcaption .shop-about {
+    opacity: 0.9;
+    -webkit-transition-delay: 0.9s;
+    transition-delay: 0.9s; }
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 10px 10px 10px 10px; }
+
+.product h4 {
+    text-align: center;
+    margin-bottom: 4px; }
+
+.product-img img {
+    display: block;
+    width: 38%;
+    height: 155px;
+    margin-left:auto;
+    margin-right:auto; }
+
+/*----- Btn Product -----*/
+.btn.btn-product {
+    width: 78%;
+    height: 44px;
+    font-size: 13px;
+    border-radius: 22px;
+    margin-left:auto;
+    margin-right:auto; }
+
+/*================== Video & Subscribe =================*/
+.content-video {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; }
+
+iframe {
+    width: 100%; 
+    max-width: 560px;
+    height: 315px; }
+
+/*----- Subscribe -----*/
+.section-header .section-title.story-taste {
+    margin-top: 20px; }
+
+.subscribe-box {
+    margin-left: auto;
+    margin-right: auto; }
+
+.subscribe-title h4 {
+    font-size: 24px;
+    color: #2e2e2e;
+    margin: 5px; }
+
+.subscribe-text {
+    line-height: 1.6; }
+
+/*----- Form Subscribe -----*/
+.form-group {
+    margin: 8px 12px; }
+
+input {
+    height: 45px; }
+
+.personal {
+    width: 100%;
+    background-color: #f5f5f5;
+    border: 1px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: #525252;
+    padding: 10px 10px; }
+
+/*----- Btn Subscribe -----*/
+.btn.btn-subscribe {
+    width: 32%;
+    height: auto;
+    border-radius: 4px;
+    margin: 8px 0 8px 0px; }
+
+/*----- Icons Link -----*/
+.contact-links {
+    display: flex;
+    width: 100%;
+    float: left;
+    flex-wrap: wrap;
+    margin-top: -7px; }
+    
+.contact-detail {
+    font-size: 30px;
+    color: #2c2b2b;
+    padding: 8px;
+    margin: 5px; }
+    
+.contact-detail:hover {
+    color: #f3e565; }
+
+/*================== Footer =================*/
+footer {
+    background-color: #2c2c2c;
+    margin-top: 20px; }
+
+.footer-content {
+    position: relative;
+    padding-top: 5px; }
+
+.footer-widget {
+    margin-left: 30px;
+    margin-right: 30px; }
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 5px; }
+
+.copyright-content {
+    background-color: #2c2c2c;
+    padding-top: 10px;
+    padding-bottom: 15px; }
+
+.copyright-content p {
+    font-size: 12px;
+    text-align: center;
+    color: #b3b3b3;
+    padding: 0px;
+    margin: 0px; }
+
+/*============= Media Queries ==============*/
+@media screen and (min-width: 950px) and (max-width: 1360px) {
+    p {
+        margin: 5px; }
+    
+    .col-md-6 {
+        max-width: 50%; float: left; flex: 50%; padding: 0px 2px; }
+    .col-md-12 {
+        max-width: 100%; float: left; flex: 100%; padding: 0 2px; }
+
+    /*----- Section -----*/
+    section {
+        padding: 20px 30px; }
+    
+    /*----- Navbar -----*/
+    .navbar .logo img {
+        width: 35%;
+        margin: 10px 0px 10px 20px; }
+
+    /*----- Hero Image -----*/
+    .hero-image .container {
+        margin-left: 40px; }
+    .home-content {
+        margin-left: 45px; }
+    .text-1, .text-2 {
+        font-size: 55px;
+        font-weight: 650;
+        padding-left: 20px; }
+    .text-3 {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 15px 0px 0px 20px;
+        margin-bottom: 10px; }
+
+    /*----- Btn Hero -----*/
+    .btn.btn-hero {
+        width: 15%;
+        height: 42px;
+        font-size: 12px;
+        padding: 10px;
+        margin-left: 20px; }
+
+    /*----- About Image -----*/
+    .about-img-1 img {
+        width: 90%;
+        height: auto;
+        margin-right: 30px;
+        z-index: 1; }
+    .about-img-2 img {
+        width: 70%;
+        height: auto;
+        margin-top: -200px;
+        margin-left: -80px;
+        z-index: 2; }
+
+    /*----- Content Image -----*/
+    .box-content.content-image {
+        padding: 0 10px;
+        margin-top: 40px;
+        margin-left: 55px; }
+    .content-image img {
+        width: 16%;
+        height: auto;
+        cursor: pointer; }
+
+    /*----- Card Coffee -----*/
+    .card {
+        padding: 10px;
+        margin: 5px 40px 20px 40px; }
+    .card.about-item {
+        border-radius: 0px 24px 0px 0px;
+        padding-top: 15px;
+        margin-top: 25px; }
+    .about-icon i {
+        font-weight: 480; }
+
+    /*----- Make Coffee -----*/
+    figure.shop-img {
+        margin: 40px 5px 10px 15px; }
+    .section-title.product-title {
+        font-size: 40px;
+        margin: 40px 30px 30px 30px; }
+    .product {
+        padding: 10px;
+        margin: -10px 5px 5px 5px; }
+    .product .product-img img {       
+        width: 28%;
+        height: 110px; }
+    .product h4 {
+        margin-top: 0px; }
+
+    /*----- Btn Product -----*/
+    .btn.btn-product {
+        width: 58%;
+        height: 34px;
+        font-size: 12px;
+        padding: 9px 6px; }
+
+    /*----- Barista Team -----*/
+    .section-title.barista-team {
+        font-size: 40px;
+        margin: 40px auto 20px auto; }
+    .card-wrapper {
+        height: 400px;
+        margin: -5px auto 50px auto; }
+    .card-image {
+        width: 65%;
+        left: 50%; }
+    .card-description {
+        padding-top: 20px;
+        padding-bottom: 5px; }
+
+    /*----- Video -----*/
+    .section-title.story-taste {
+        font-size: 40px;
+        margin: 30px auto 0px auto; }
+    .content-video {
+        margin-top: 14px; }
+
+    /*----- Subscribe -----*/
+    .subscribe-box {
+        margin-left: 70px;
+        margin-right: 70px; }
+    .subscribe-title h4 {
+        text-align: center;
+        margin: 8px auto 8px auto; }
+    .subscribe-text {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center; }
+    .subscribe-form .form-group {
+        margin: 10px 15px 5px 15px; }
+
+    /*----- Btn Subscribe -----*/
+    .btn.btn-subscribe {
+        width: 16%;
+        font-size: 12px;
+        padding: 9px 5px;
+        margin: 8px auto 8px auto; }
+
+    /*----- Icons Link -----*/
+    .contact-links a.contact-detail {
+        position: relative;
+        left: 30%;
+        margin: 15px 20px 5px 20px; }
+
+}
+
+@media screen and (min-width: 650px) and (max-width: 949px) {
+    h1, h2, h3,h4, h5, h6 {
+        font-weight: 600;
+        margin: 0 0 2px 0; }
+    p {
+        margin: 5px; }
+
+    .col-md-6 {
+        max-width: 50%; float: left; flex: 50%; padding: 0px 2px; }
+    .col-md-12 {
+        max-width: 100%; float: left; flex: 100%; padding: 0 2px; }
+
+    /*----- Section -----*/
+    section {
+        padding: 10px 10px; }
+
+    /*----- Navbar -----*/
+    header {
+        flex-wrap: wrap; }
+    .navbar {
+        padding: 0 auto; }
+    .navbar .logo img {
+        width: 65%;
+        margin: 11px 0px 11px 20px; }
+    .navbar-menu .navbar-nav {
+        padding-left: auto;
+        padding-right: 50px; }
+
+    /*----- Hero Image -----*/
+    .hero-image {
+        min-height: 580px; }
+    .hero-image .container {
+        margin-left: 30px; }
+    .home-content {
+        margin-left: 35px; }
+    .text-1, .text-2 {
+        font-size: 35px;
+        font-weight: 650;
+        padding-left: 20px; }
+    .text-3 {
+        font-size: 15px;
+        font-weight: bold;
+        padding: 15px 0px 0px 20px;
+        margin-bottom: 10px; }
+
+    /*----- Btn Hero -----*/
+    .btn.btn-hero {
+        width: 18%;
+        height: 40px;
+        font-size: 12px;
+        padding: 10px;
+        margin-left: 20px; }
+
+    /*----- About Content -----*/
+    .content-about {
+        padding: 25px 10px 0 20px;
+        margin-top: 10px; }
+    .content-about h3 {
+        font-size: 32px;
+        padding-left: 22px; } 
+    .content-about p {
+        font-size: 14px;
+        padding: 0 18px;
+        z-index: 3; }
+
+    /*----- Btn About -----*/
+    .btn.btn-about {
+        width: 30%;
+        height: 38px;
+        font-size: 12px;
+        border-radius: 6px;
+        padding: 10px 6px;
+        margin-left: 42px; }
+
+    /*----- About Image -----*/
+    .about-img-1 img {
+        width: 90%;
+        height: auto;
+        margin-right: 30px;
+        z-index: 1; }
+    .about-img-2 img {
+        width: 78%;
+        height: auto;
+        margin-top: -150px;
+        margin-left: -80px;
+        z-index: 2; }
+
+    /*----- Content Image -----*/
+    .box-content.content-image {
+        padding: 0 10px;
+        margin-top: 40px;
+        margin-left: 65px; }
+    .content-image img {
+        width: 30%;
+        height: auto;
+        cursor: pointer; }
+
+    /*----- Card Coffee -----*/
+    .card {
+        padding: 8px;
+        margin: 5px auto 10px auto; }
+    .card.about-item {
+        border-radius: 0px 24px 0px 0px;
+        padding-top: 15px;
+        margin: 22px 40px 0px 44px; }
+    .about-icon i {
+        font-weight: 480; }
+
+    /*----- Make Coffee -----*/
+    figure.shop-img {
+        margin: 35px 5px 10px 15px; }
+    .section-title.product-title {
+        font-size: 30px;
+        margin: 35px 25px 25px 25px; }
+    .product {
+        padding: 5px;
+        margin: -10px 5px 5px 5px; }
+    .product .product-img img {       
+        width: 30%;
+        height: 98px; }
+    .product h4 {
+        margin-top: 0px; }
+
+    /*----- Btn Product -----*/
+    .btn.btn-product {
+        width: 74%;
+        height: auto;
+        font-size: 12px;
+        padding: 9px 6px; }
+
+    /*----- Barista Team -----*/
+    .section-title.barista-team {
+        font-size: 30px;
+        margin: 30px auto 20px auto; }
+    .card-wrapper {
+        height: 400px;
+        margin: -5px auto 50px auto; }
+    .card-image {
+        max-width: 85%;
+        left: 50%; }
+    .card-description {
+        padding-top: 20px;
+        padding-bottom: 5px; }
+    
+    /*----- Video -----*/
+    .section-title.story-taste {
+        font-size: 30px;
+        margin: 30px auto 0px auto; }
+    .content-video {
+        margin-top: 14px; }
+    .content-video iframe {
+        width: 100%;
+        height:285px; }
+
+    /*----- Subscribe -----*/
+    .subscribe-box {
+        margin-left: 60px; 
+        margin-right: 60px; }
+    .subscribe-title h4 {
+        text-align: center;
+        margin: 8px auto 5px auto; }
+    .subscribe-text {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center; }
+    .subscribe-form .form-group {
+        margin: 10px 20px 5px 20px; }
+
+    /*----- Btn Subscribe -----*/
+    .btn.btn-subscribe {
+        width: 20%;
+        font-size: 12px;
+        padding: 9px 5px;
+        margin: 8px auto 5px auto; }
+
+    /*----- Icons Link -----*/
+    .contact-links a.contact-detail {
+        position: relative;
+        left: 23%;
+        margin: 10px 20px 5px 20px; }
+    
+}
+
+@media screen and (min-width: 320px) and (max-width: 649px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        margin: 0 0 2px 0; }
+    p {
+        font-weight: 300;
+        margin: 5px; }
+
+    .col-sm-6 {
+        max-width: 50%; float: left; flex: 50%; padding: 0px; }
+    .col-sm-12 {
+        max-width: 100%; float: left; flex: 100%; padding: 0px; }
+    
+    /*----- Section -----*/
+    section {
+        padding: 4px; }
+
+    /*----- navbar -----*/
+    header {
+        flex-wrap: wrap; }
+    .navbar .logo img {
+        width: 60%;
+        margin: 8px 0px 8px 20px; }
+    .navbar .menu-btn {
+        display: flex;
+        margin-right: 25px; }
+    .navbar-menu {
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-around;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 100vh;
+        background-color: #252523;
+        transform: translateX(100vw);
+        transition: transform 0.3s ease-in-out; }
+    .navbar-menu.open {
+        transform: translateX(0); }
+    .navbar-menu li {
+        width: 100vw;
+        height: 100%; }
+    .navbar-menu li .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 24px;
+        color: #ececec;
+        padding: 20px; }
+    .navbar-menu .fa.fa-shopping-cart {
+        font-size: 24px;
+        color: #ececec; }
+    
+    /*----- Hero Image -----*/
+    .hero-image {
+        min-height: 490px; }
+    .hero-image .container {
+        margin-left: 10px; }
+    .home-content {
+        margin-top: 45px;
+        margin-left: 15px; }
+    .hero-image .home-content .text-1,
+    .hero-image .home-content .text-2 {
+        font-size: 30px;
+        font-weight: 700;
+        padding-left: 12px; }
+    .hero-image .home-content .text-3{
+        font-size: 12px;
+        font-weight: bold;
+        padding: 10px 0px 0px 15px;
+        margin-bottom: 6px; }
+            
+    /*----- Btn Hero -----*/
+    .btn-control .btn.btn-hero {
+        width: 32%;
+        height: 26px;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 8px 5px;
+        margin-left: 12px; }
+
+    /*----- About Content -----*/
+    .box-content .content-about {
+        padding-top: 20px;
+        padding-left: 0px;
+        margin: 5px; }
+    .content-about h3 {
+        font-size: 28px;
+        text-align: center;
+        padding: 0px auto; } 
+    .content-about p {
+        font-size: 14px;
+        padding: 0 12px; }
+
+    /*----- Btn About -----*/
+    .btn.btn-about {
+        width: 30%;
+        height: 28px;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 6px;
+        padding: 10px 6px;
+        margin-left: 22px; }
+
+    /*----- About Image -----*/
+    .about-img-1 img {
+        width: 90%;
+        float: left;
+        margin: 25px auto 10px 19px; }
+    .about-img-2 img {
+        width: 90%;
+        margin: 5px auto 0px 19px; }
+
+    /*----- Content Image -----*/
+    .box-content.content-image {
+        padding: 0px;
+        margin: 17px auto 0px 23px; }
+    .content-image img {
+        width: 48%; }
+
+    /*----- Card Coffee -----*/
+    .card {
+        justify-content: center;
+        padding: 5px;
+        margin: 0px 22px 10px 22px; }
+    .card.about-item {
+        text-align: center;
+        border-radius: 0px 24px 0px 0px;
+        padding-top: 15px;
+        margin-top: 12px; }
+    .about-item p {
+        font-size: 14px; }
+    .about-icon {
+        font-size: 22px;
+        padding-left: 7px; }
+
+    /*----- Make Coffee -----*/
+    figure.shop-img {
+        width: 95%;
+        margin: 12px 24px 10px auto; }
+    .product-title {
+        font-size: 26px;
+        margin: 16px auto; }
+    .product {
+        padding: 6px;
+        margin: 5px; }
+    .product-img img {       
+        width: 32%;
+        height: 100px; }
+    .product h4 {
+        font-weight: bold;
+        margin-top: 10px; }
+
+    /*----- Btn Product -----*/
+    .btn.btn-product {
+        width: 72%;
+        height: auto;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 9px 5px; }
+
+    /*----- Barista Team -----*/
+    .barista-team {
+        font-size: 26px;
+        margin: 18px auto 0px auto; }
+    .card-wrapper {
+        height: 400px;
+        margin-top: -25px;
+        margin-bottom: 10px; }
+    .card-image {
+        left: 50%;
+        max-width: 72%;
+        height: 320px; }
+    .card-description h3 {
+        font-weight: bold;
+        padding-top: 14px;
+        padding-bottom: 0px; }
+
+    /*----- Video & Subscribe -----*/
+    .story-taste {
+        font-size: 26px;
+        margin: 18px auto 0px auto; }
+    .content-video {
+        margin-top: 14px; }
+    .content-video iframe {
+        width: 90%;
+        height:200px; }
+
+    /*----- Subscribe -----*/
+    .subscribe-box {
+        margin-left: 10px; 
+        margin-right: 10px; }
+    .subscribe-title h4 {
+        text-align: center;
+        margin: 8px auto 5px auto; }
+    .subscribe-text {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center; }
+    .subscribe-form .form-group {
+        margin: 10px 10px 5px 10px; }
+
+    /*----- Btn Subscribe -----*/
+    .btn.btn-subscribe {
+        width: 32%;
+        font-size: 12px;
+        padding: 9px 5px;
+        margin: 8px auto 5px auto; }
+
+    /*----- Icons Link -----*/
+    .contact-links a.contact-detail {
+        position: relative;
+        left: 16%;
+        margin: 10px 10px 5px 10px; }
+
+    /*----- Footer -----*/
+    footer {
+        margin-top: 5px; }
+    
+    .copyright-content {
+        padding-top: 5px }
+
+}
