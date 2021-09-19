@@ -1,165 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Landing Page</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Landing Page</title>
 
-    <!-- JavaScript -->
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
-    <!-- CSS Style -->
-    <link rel="stylesheet" href="asset/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/d8c6a430bc.css">
-</head>
-
-<body>
-    <header id="header">
-        <!-- Navbar -->
-        <nav id="nav-bar" class="navbar">
-            <div class="logo">
-                <img id="header-img" src="asset/images/logo.png" alt="">
-            </div>
-            <div class="container">  
-                <ul class="navbar-menu">
-                    <li><a class="nav-link" href="#">Home</a></li>
-                    <li><a class="nav-link" href="#about">About</a></li>
-                    <li><a class="nav-link" href="#products">Products</a></li>
-                    <li><a class="nav-link" href="#contact">Contact</a></li>
-                    <li><a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-            <!-- Hamburger -->
-            <div class="menu-btn">
-                <div class="menu-btn__lines"></div>
-            </div>
-        </nav>
-        <!-- Banner Image -->
-        <div class="hero-image load">
-            <div class="container">
-                <div class="home-content">
-                    <div class="text-1">All you need to feel </div>
-                    <div class="text-2">better is coffee.</div>
-                    <div class="text-3">A cup of warm espresso coffee soothes the atmosphere.<span class="typing"></span></div>
-                    <div class="btn-control ">
-                        <a class="btn btn-hero" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+        <!-- CSS Style -->
+        <link rel="stylesheet" href="asset/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/d8c6a430bc.css">
     
-    <main role="main">       
-        <!-- About Section -->
-        <section id="about">
-            <div class="container">
-                <!-- About Content -->
-                <div class="row">
-                    <div class="col-6 col-md-6 col-sm-12">
-                        <div class="box-content">
-                            <div class="content-about">
-                                <h3>About Coffee Bar</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            </div>
-                            <div class="btn-control">
-                                <a class="btn btn-about" href="">Story Owner</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-6 col-sm-12">
-                        <div class="about-img-1">
-                            <img src="asset/images/pexels-dmitry-zvolskiy-2253643.jpg" alt="">
-                        </div>
-                        <div class="about-img-2">
-                            <img src="asset/images/pexels-porapak-apichodilok-373639.jpg" alt="">
-                        </div>
-                    </div>
+    </head>
+    <body>
+        <header id="header">
+            <!-- Navbar -->
+            <nav id="nav-bar" class="navbar">
+                <div class="logo">
+                    <img id="header-img" src="asset/images/logo.png" alt="">
                 </div>
-                <div class="row">
-                    <div class="col-6 col-md-12 col-sm-12">
-                        <div class="box-content content-image">
-                            <img src="asset/images/pexels-jonathan-borba-2878707.jpg" onclick="onClick(this)" alt="">
-                            <img src="asset/images/pexels-viktoria-alipatova-2668498.jpg" onclick="onClick(this)" alt="">
-                            <img src="asset/images/pexels-cottonbro-3205736.jpg" onclick="onClick(this)" alt="">
-                            <img src="asset/images/pexels-maria-orlova-4916562.jpg" onclick="onClick(this)" alt="">
-                            <img src="asset/images/pexels-cottonbro-4787614.jpg" onclick="onClick(this)" alt="">
-                            <img src="asset/images/pexels-ryutaro-tsukata-5745642.jpg" onclick="onClick(this)" alt="">
-                        </div>
-                        <!-- Modal Image -->
-                        <div id="modal01" class="modal" onclick="this.style.display='none'">
-                            <span class="close">&times;</span>
-                            <div>
-                                <img id="img01" class="modal-content">
-                            </div>
+                <div class="container">  
+                    <ul class="navbar-menu">
+                        <li><a class="nav-link" href="#hero">Home</a></li>
+                        <li><a class="nav-link" href="#about">About</a></li>
+                        <li><a class="nav-link" href="#products">Products</a></li>
+                        <li><a class="nav-link" href="#contact">Contact</a></li>
+                        <li><a class="nav-link" href="#products"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <!-- Hamburger -->
+                <div class="menu-btn">
+                    <div class="menu-btn__lines"></div>
+                </div>
+            </nav>
+            <!-- Banner Image -->
+            <div id="hero" class="hero-image load">
+                <div class="container">
+                    <div class="home-content">
+                        <div class="text-1">All you need to feel </div>
+                        <div class="text-2">better is coffee.</div>
+                        <div class="text-3">A cup of warm espresso coffee soothes the atmosphere.<span class="typing"></span></div>
+                        <div class="btn-control ">
+                            <a class="btn btn-hero" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop Now</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Product Section -->
-        <section id="products">
-            <div container>
-                <div class="row">
-                    <div class="col-3 col-md-6 col-sm-12">
-                        <div class="card about-item">
-                            <div class="about-icon">
-                                <i class="fa fa-coffee" aria-hidden="true"> Espresso</i> 
+        </header>
+        
+        <main role="main">       
+            <!-- About Section -->
+            <section id="about">
+                <div class="container">
+                    <!-- About Content -->
+                    <div class="row">
+                        <div class="col-6 col-md-6 col-sm-12">
+                            <div class="content-about">
+                                <div class="story-owner">
+                                    <div class="section-header">
+                                        <h1 class="section-title">About Coffee Bar</h1>
+                                    </div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                                    <div class="btn-control">
+                                        <a class="btn btn-about" href="">Story Owner</a>
+                                    </div>
+                                </div>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
                         </div>
-                    </div>
-                    <div class="col-3 col-md-6 col-sm-12">
-                        <div class="card about-item">
-                            <div class="about-icon">
-                                <i class="fa fa-coffee" aria-hidden="true"> Macchiato</i> 
+                        <div class="col-6 col-md-6 col-sm-12">
+                            <div class="content-about">
+                                <div class="about-img-1">
+                                    <img src="asset/images/about-image1.jpg" alt="">
+                                </div>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
                         </div>
-                    </div>
-                    <div class="col-3 col-md-6 col-sm-12">
-                        <div class="card about-item">
-                            <div class="about-icon">
-                                <i class="fa fa-coffee" aria-hidden="true"> Cappucino</i> 
+                        <div class="col-12">
+                            <div class="content-image">
+                                <img src="asset/images/content-image1.jpg" onclick="onClick(this)" alt="">
+                                <img src="asset/images/content-image2.jpg" onclick="onClick(this)" alt="">
+                                <img src="asset/images/content-image3.jpg" onclick="onClick(this)" alt="">
+                                <img src="asset/images/content-image4.jpg" onclick="onClick(this)" alt="">
+                                <img src="asset/images/content-image5.jpg" onclick="onClick(this)" alt="">
+                                <img src="asset/images/content-image6.jpg" onclick="onClick(this)" alt="">
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
-                        </div>
-                    </div>
-                    <div class="col-3 col-md-6 col-sm-12">
-                        <div class="card about-item">
-                            <div class="about-icon">
-                                <i class="fa fa-coffee" aria-hidden="true"> Latte</i> 
+                            <!-- Modal Image -->
+                            <div id="modal01" class="modal" onclick="this.style.display='none'">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img id="img01" class="modal-content">
+                                    <p id="caption"></p>
+                                </div>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                            
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="row">
-                    <div class="col-5 col-md-6 col-sm-12">
-                        <figure class="shop-img">
-                            <img src="asset/images/pexels-chevanon-photography-302888.jpg" alt="">
-                            <figcaption>
-                                <h2>Coffee Store</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
-                                <ul class="shop-about">
-                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>  East Java, Surabaya</li>
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i>  09.00 - 23.00 WIB</li>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>  Sunday - Saturday</li>
-                                </ul>
-                            </figcaption>
-                        </figure>
+            <section id="coffee-menu">
+                <div class="container">
+                    <div class="section-header">
+                        <h1 class="section-title">Coffee Menu</h1>
                     </div>
-                    <div class="col-7 col-md-6 col-sm-12">
-                        <div class="section-header">
-                            <h3 class="section-title product-title">Our Best Deal</h3>
+                    <div class="row">
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <div class="card coffee-item">
+                                <figure class="coffee-list">
+                                    <img class="coffee" src="asset/images/coffee-latte.jpg" alt="pic1">
+                                    <div class="coffee-icon">
+                                        <i class="fa fa-coffee" aria-hidden="true"> <span>Espresso</span></i>
+                                    </div>
+                                </figure>
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-4 col-md-6 col-sm-6">
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <div class="card coffee-item">
+                                <figure class="coffee-list">
+                                    <img class="coffee" src="asset/images/coffee-americano.jpg" alt="pic1">
+                                    <div class="coffee-icon">
+                                        <i class="fa fa-coffee" aria-hidden="true"> <span>Macchiato</span></i> 
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <div class="card coffee-item">
+                                <figure class="coffee-list">
+                                    <img class="coffee" src="asset/images/coffee-cappucino.jpg" alt="pic1">
+                                    <div class="coffee-icon">
+                                        <i class="fa fa-coffee" aria-hidden="true"> <span>Cappucino</span></i> 
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <div class="card coffee-item">
+                                <figure class="coffee-list">
+                                    <img class="coffee" src="asset/images/coffee-latte.jpg" alt="pic1">
+                                    <div class="coffee-icon">
+                                        <i class="fa fa-coffee" aria-hidden="true"> <span>Latte</span></i> 
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <div class="card coffee-item">
+                                <figure class="coffee-list">
+                                    <img class="coffee" src="asset/images/coffee-americano.jpg" alt="pic1">
+                                    <div class="coffee-icon">
+                                        <i class="fa fa-coffee" aria-hidden="true"> <span>Americano</span></i> 
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <div class="card coffee-item">
+                                <figure class="coffee-list">
+                                    <img class="coffee" src="asset/images/coffee-cappucino.jpg" alt="pic1">
+                                    <div class="coffee-icon">
+                                        <i class="fa fa-coffee" aria-hidden="true"> <span>Ristretto</span></i> 
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <div class="card coffee-item">
+                                <figure class="coffee-list">
+                                    <img class="coffee" src="asset/images/coffee-latte.jpg" alt="pic1">
+                                    <div class="coffee-icon">
+                                        <i class="fa fa-coffee" aria-hidden="true"> <span>Mocha</span></i> 
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <div class="card coffee-item">
+                                <figure class="coffee-list">
+                                    <img class="coffee" src="asset/images/coffee-americano.jpg" alt="pic1">
+                                    <div class="coffee-icon">
+                                        <i class="fa fa-coffee" aria-hidden="true"> <span>Cold Brew</span></i> 
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-sm-12">
+                            <div class="card coffee-item">
+                                <figure class="coffee-list">
+                                    <img class="coffee" src="asset/images/coffee-cappucino.jpg" alt="pic1">
+                                    <div class="coffee-icon">
+                                        <i class="fa fa-coffee" aria-hidden="true"> <span>Frappe</span></i> 
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Section -->
+            <section id="products">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-5 col-md-5 col-sm-12">
+                            <figure class="shop-img">
+                                <img src="asset/images/shop-image1.jpg" alt="">
+                                <figcaption>
+                                    <h2>Coffee Store</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                    <ul class="shop-about">
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>  East Java, Surabaya</li>
+                                        <li><i class="fa fa-clock-o" aria-hidden="true"></i>  09.00 - 23.00 WIB</li>
+                                        <li><i class="fa fa-calendar" aria-hidden="true"></i>  Sunday - Saturday</li>
+                                    </ul>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-7 col-md-7 col-sm-12">
+                            <div class="section-header">
+                                <h1 class="section-title">Our Best Deal</h1>
+                            </div>
+                            <div class="col-6 col-md-6 col-sm-6">
                                 <div class="product">
-                                    <div class="product-img" id="coffee-white">
-                                        <img src="asset/images/coffee-white.png" alt="">
+                                    <div class="product-img">
+                                        <img src="asset/images/mockup.png" alt="">
                                     </div>
                                     <h4>Gray Coffee</h4>
                                     <div class="btn-control">
@@ -167,10 +230,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-6 col-sm-6">
+                            <div class="col-6 col-md-6 col-sm-6">
                                 <div class="product">
-                                    <div class="product-img" id="coffee-gray">
-                                        <img src="asset/images/coffee-gray.png" alt="">
+                                    <div class="product-img">
+                                        <img src="asset/images/mockup-black.png" alt="">
                                     </div>
                                     <h4>White Coffee</h4>
                                     <div class="btn-control">
@@ -178,10 +241,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-6 col-sm-6">
+                            <div class="col-6 col-md-6 col-sm-6">
                                 <div class="product">
-                                    <div class="product-img" id="coffee-black">
-                                        <img src="asset/images/coffee-black.png" alt="">
+                                    <div class="product-img">
+                                        <img src="asset/images/mockup.png" alt="">
                                     </div>
                                     <h4>Black Coffee</h4>
                                     <div class="btn-control">
@@ -189,10 +252,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-6 col-sm-6">
+                            <div class="col-6 col-md-6 col-sm-6">
                                 <div class="product">
-                                    <div class="product-img" id="coffee-white-s">
-                                        <img src="asset/images/coffee-white.png" alt="">
+                                    <div class="product-img">
+                                        <img src="asset/images/mockup-black.png" alt="">
                                     </div>
                                     <h4>Gray Coffee</h4>
                                     <div class="btn-control">
@@ -200,138 +263,113 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-6 col-sm-6">
-                                <div class="product">
-                                    <div class="product-img" id="coffee-gray-s">
-                                        <img src="asset/images/coffee-gray.png" alt="">
-                                    </div>
-                                    <h4>White Coffee</h4>
-                                    <div class="btn-control">
-                                        <a class="btn btn-product" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i> $49.00</a>
-                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section id=team>
+                <div class="container">
+                    <div class="section-header">
+                        <h1 class="section-title">Barista Team</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 col-md-6 col-sm-12">
+                            <div class="card-wrapper">
+                                <div class="card-image">
+                                    <img src="asset/images/barista-1.jpg" alt="">
+                                </div>
+                                <div class="card-description">
+                                    <h3>Anton Doe</h3>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-6 col-sm-6">
-                                <div class="product">
-                                    <div class="product-img" id="coffee-black-s">
-                                        <img src="asset/images/coffee-black.png" alt="">
-                                    </div>
-                                    <h4>Black Coffee</h4>
-                                    <div class="btn-control">
-                                        <a class="btn btn-product" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i> $65.00</a>
-                                    </div>
+                        </div>
+                        <div class="col-3 col-md-6 col-sm-12">
+                            <div class="card-wrapper">
+                                <div class="card-image">
+                                    <img src="asset/images/barista-2.jpg" alt="">
+                                </div>
+                                <div class="card-description">
+                                    <h3>Lisa Chung</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-6 col-sm-12">
+                            <div class="card-wrapper">
+                                <div class="card-image">
+                                    <img src="asset/images/barista-3.jpg" alt="">
+                                </div>
+                                <div class="card-description">
+                                    <h3>Dany Ings</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-6 col-sm-12">
+                            <div class="card-wrapper">
+                                <div class="card-image">
+                                    <img src="asset/images/barista-4.jpg" alt="">
+                                </div>
+                                <div class="card-description">
+                                    <h3>Linda Hodson</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Team Section -->
-        <section id=team>
-            <div class="container">
-                <div class="section-header">
-                    <h3 class="section-title barista-team">Barista Team</h3>
-                </div>
-                <div class="row">
-                    <div class="col-3 col-md-6 col-sm-12">
-                        <div class="card-wrapper">
-                            <div class="card-image">
-                                <img src="asset/images/pexels-tim-douglas-6205454=1.jpg" alt="">
-                            </div>
-                            <div class="card-description">
-                                <h3>Anton Doe</h3>
+            <!-- Contact Section -->
+            <section id="contact">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Story Taste Coffee</h2>
+                    </div>
+                    <div class="row">
+                        <!-- Video -->
+                        <div class="col-7 col-md-12 col-sm-12">
+                            <div class="content-video">
+                                <iframe id="video" src="https://www.youtube.com/embed/YjDrp4nruU0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-3 col-md-6 col-sm-12">
-                        <div class="card-wrapper">
-                            <div class="card-image">
-                                <img src="asset/images/pexels-tim-douglas-6205454=2.jpg" alt="">
-                            </div>
-                            <div class="card-description">
-                                <h3>Lisa Chung</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 col-md-6 col-sm-12">
-                        <div class="card-wrapper">
-                            <div class="card-image">
-                                <img src="asset/images/pexels-cottonbro-4790061.jpg" alt="">
-                            </div>
-                            <div class="card-description">
-                                <h3>Dany Ings</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 col-md-6 col-sm-12">
-                        <div class="card-wrapper">
-                            <div class="card-image">
-                                <img src="asset/images/pexels-cottonbro-4787601.jpg" alt="">
-                            </div>
-                            <div class="card-description">
-                                <h3>Linda Hodson</h3>
+                        <div class="col-5 col-md-12 col-sm-12">
+                            <div class="subscribe-box">
+                                <h2>News Letter</h2>
+                                <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr, sederfs diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+                                <div class="subscribe-form">
+                                    <form id="form" class="form-group" action="https://www.freecodecamp.com/email-submit">
+                                        <input class="personal" type="email" id="email" name="email" placeholder="Enter your email address" required><br>
+                                        <div class="btn-control">
+                                            <input class="btn btn-subscribe" id="submit" type="submit" value="Subscribe"></input>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="contact-links">
+                                    <a href="#" class="contact-detail"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                    <a href="#" class="contact-detail"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#" class="contact-detail"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="#" class="contact-detail"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h4 class="section-title story-taste">Story Taste Coffee</h4>
-                </div>
-                <div class="row">
-                    <!-- Video -->
-                    <div class="col-7 col-md-12 col-sm-12">
-                        <div class="content-video">
-                            <iframe id="video" src="https://www.youtube.com/embed/YjDrp4nruU0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="col-5 col-md-12 col-sm-12">
-                        <div class="subscribe-box">
-                            <div class="subscribe-title">
-                                <h4>News Letter</h4>
-                            </div>
-                            <p class="subscribe-text">Lorem ipsum dolor sit amet consetetur sadipscing elitr, sederfs diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
-                            <div class="subscribe-form">
-                                <form id="form" class="form-group" action="https://www.freecodecamp.com/email-submit">
-                                    <input class="personal" type="email" id="email" name="email" placeholder="Enter your email address" required><br>
-                                    <div class="btn-control">
-                                        <input class="btn btn-subscribe" id="submit" type="submit" value="Subscribe"></input>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="contact-links">
-                                <a href="#" class="contact-detail"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                                <a href="#" class="contact-detail"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#" class="contact-detail"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="" class="contact-detail"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="footer-copyright">
+                <div class="copyright-content">
+                    <p>Design and Develop by Muh. Taufik H.</p>
+                    <p>2021 &copy; Copyright <strong>opikoenkz@gmail.com</strong></p>
                 </div>
             </div>
-        </section>
-        
-    </main>
+        </footer>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="footer-copyright">
-            <div class="copyright-content">
-                <p>Design and Develop by Muh. Taufik H.</p>
-                <p>2021 &copy; Copyright <strong>opikoenkz@gmail.com</strong></p>
-            </div>
-        </div>
-    </footer>
+        <!-- JavaScript -->
+        <script src="asset/main.js"></script>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
-    <!-- JavaScript -->
-    <script src="asset/main.js"></script>
-</body>
-
+    </body>
 </html>
